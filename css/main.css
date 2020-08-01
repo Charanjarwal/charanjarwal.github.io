@@ -1,0 +1,228 @@
+html {
+  height: 100%;
+
+
+
+}
+
+body {
+  background: #000;
+  height: 100%;
+  background-image: url('../img/backimage.jpg');
+  background-size: cover;
+  background-position: inherit;
+
+}
+
+#zee-ball {
+  position: absolute;
+  top: 440px;
+  left: 390px;
+
+  transition: width 0.5s linear, height 0.5s linear;
+}
+
+#kickAnimation {
+  position: absolute;
+  top: 250px;
+  left: 280px;
+}
+
+#zee-game {
+  margin: 0 auto 0 auto;
+  width: 810px;
+  height: 525px;
+  position: relative;
+  background: url('../img/background.jpg') no-repeat top center transparent;
+  cursor: pointer;
+  overflow: hidden;
+
+  /* center vertically on the screen */
+  top: 50%;
+  margin-top: -262.5px;
+}
+
+#vertical-direction {
+  position: absolute;
+  top: 342px;
+  left: 60px;
+  width: 17px;
+  height: 130px;
+  background: url('../img/direction-vertical.png') no-repeat 0 0 transparent;
+}
+
+#horizontal-direction {
+  position: absolute;
+  top: 500px;
+  left: 60px;
+  width: 132px;
+  height: 18px;
+  background: url('../img/direction-horizontal.png') no-repeat 0 0 transparent;
+}
+
+#power-level {
+  position: absolute;
+  top: 500px;
+  right: 70px;
+  width: 134px;
+  height: 11px;
+  background: url('../img/power.png') no-repeat 0 0 transparent;
+}
+
+.small-ball {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: url('../img/small-ball.png') no-repeat 0 0 transparent;
+}
+
+#horizontal-direction-indicator {
+  top: 480px;
+
+  transition: left 0.6s ease-out;
+}
+
+#horizontal-direction-indicator.one-end {
+  left: 60px;
+}
+
+#horizontal-direction-indicator.other-end {
+  left: 179px;
+}
+
+#vertical-direction-indicator {
+  left: 82px;
+
+  transition: top 0.6s ease-out;
+}
+
+#vertical-direction-indicator.one-end {
+  top: 342px;
+}
+
+#vertical-direction-indicator.other-end {
+  top: 459px;
+}
+
+#power-level-indicator {
+  top: 477px;
+
+  transition: right 0.6s ease-out;
+}
+
+#power-level-indicator.one-end {
+  right: 70px;
+}
+
+#power-level-indicator.other-end {
+  right: 191px;
+}
+
+/* goal keeper */
+.goal-keeper {
+  position: absolute;
+  height: 194px;
+  width: 596px;
+  top: 98px;
+  left: 114px;
+}
+
+.goal-keeper.standing {
+  background: url('../img/keeper-standing.png') no-repeat 0 0 transparent;
+}
+
+.goal-keeper.right-jump {
+  background: url('../img/keeper-right-jump.png') no-repeat 0 0 transparent;
+  display: none;
+}
+
+.goal-keeper.left-jump {
+  background: url('../img/keeper-left-jump.png') no-repeat 0 0 transparent;
+  display: none;
+}
+
+/* modals */
+
+.modal {
+  position: absolute;
+  top: -475px;
+  left: 239px;
+  width: 288px;
+  min-height: 41px;
+  padding: 30px;
+
+  transition: top 0.26s ease-out;
+  text-align: center;
+  /* default fallback */
+  background: rgb(255, 255, 255) transparent;
+  /* nice browsers */
+  background: rgba(255, 255, 255, 0.8);
+  /* IE 6/7 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF);
+  /* IE8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF, endColorstr=#CCFFFFFF)";
+  /* border radius */
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+
+  /* font styles */
+  font: 25px sans-serif;
+}
+
+.modal.active {
+  top: 232px;
+}
+
+#score-board {
+  list-style: none;
+  padding: 6px 0 0 64px;
+  margin: 0;
+}
+
+#score-board li {
+  float: left;
+  margin-right: 6px;
+  zoom: 1;
+  filter: alpha(opacity=56);
+  opacity: 0.56;
+}
+
+#score-board li.scored {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+
+
+
+
+#zee-button {
+  position: absolute;
+  top: 497px;
+  left: 318px;
+  width: 177px;
+  height: 49px;
+  cursor: pointer;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 35em) {}
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {}
+
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
